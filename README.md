@@ -3,12 +3,12 @@ Millions of movies, TV shows and people to discover. Explore now
 Movie app that recieves popular movies and allow the user to search for specific
 movie through the restapi with help of retrofit library &MVVM architecture. 
 
-   Features :
-          * Latest, Trending, Popular, TopRated Movies/Tv/Web Series
-          * Search Movies, TV/Web Series
-          * Live Changes
-          * Search Any Movies/TV/Web Series
-          * Get Similar recommendations
+Features :
+   * Latest, Trending, Popular, TopRated Movies/Tv/Web Series
+   * Search Movies, TV/Web Series
+   * Live Changes
+   * Search Any Movies/TV/Web Series
+   * Get Similar recommendations
           
    Api : The Movie Database (TMDb) is a community built movie and TV database.
 
