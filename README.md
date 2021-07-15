@@ -10,16 +10,16 @@ Features :
    * Search Any Movies/TV/Web Series
    * Get Similar recommendations
           
-   Api : The Movie Database (TMDb) is a community built movie and TV database.
+Api : The Movie Database (TMDb) is a community built movie and TV database.
 
-   Here's the specifics of what you will see in the code:
-         ✔ Communicating with a webservice (rest api) using Retrofit2
-         ✔ MVVM Architecture: ViewModel, Repository, Client structure
-         ✔ Coroutines
-         ✔ Custom Loading Animation ProgressBar / Shimmer in Recyclerview
-         ✔ ViewModels and AndroidViewModels
-         ✔ Multiple View Types in a Recyclerview
-         ✔ Observables, LiveData, MutableLiveData
-         ✔ Displaying Images using Glide
-         ✔ Passing Object between activities using Gson
-         ✔ Network Security Config for HTTP (API 28+)
+Here's the specifics of what you will see in the code:
+  ✔ Communicating with a webservice (rest api) using Retrofit2
+  ✔ MVVM Architecture: ViewModel, Repository, Client structure
+  ✔ Coroutines
+  ✔ Custom Loading Animation ProgressBar / Shimmer in Recyclerview
+  ✔ ViewModels and AndroidViewModels
+  ✔ Multiple View Types in a Recyclerview
+  ✔ Observables, LiveData, MutableLiveData
+  ✔ Displaying Images using Glide
+  ✔ Passing Object between activities using Gson
+  ✔ Network Security Config for HTTP (API 28+)
