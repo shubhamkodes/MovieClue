@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:id="@+id/homeNestedScrollView"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="90dp"
+                android:layout_height="72dp"
+                app:lottie_rawRes="@raw/lottie_movie2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lottie_autoPlay="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                app:lottie_loop="false"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/amethysta"
+                android:gravity="center"
+                android:text="@string/discover"
+                android:textColor="@color/dark_blue_primary"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:id="@+id/tvDiscover"
+                app:layout_constraintBottom_toBottomOf="@id/animationView"
+                app:layout_constraintEnd_toStartOf="@id/btnSearch"
+                app:layout_constraintStart_toEndOf="@id/animationView"
+                app:layout_constraintTop_toTopOf="@id/animationView" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSearch"
+                android:src="@drawable/ic_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDiscover"
+                app:layout_constraintBottom_toBottomOf="@id/tvDiscover"
+                android:padding="40dp"
+                android:contentDescription="@string/searchicon" />
+
+
+            <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/trendingMoviesSlider"
+                app:layout_constraintTop_toBottomOf="@id/tvDiscover"
+                android:layout_marginTop="10dp"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                />
+
+            <TextView
+                android:id="@+id/tvMovies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/most_popular"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:drawablePadding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trendingMoviesSlider"
+                app:drawableEndCompat="@drawable/ic_film" />
+
+            <TextView
+                android:id="@+id/btnSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="21dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/see_all"
+                android:textColor="@color/dark_blue_soft"
+                app:layout_constraintBottom_toBottomOf="@id/tvMovies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvMovies" />
+
+            <com.jama.carouselview.CarouselView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/popularMovieRecyclerView"
+                app:layout_constraintTop_toBottomOf="@id/tvMovies"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                app:enableSnapping="true"
+                app:scaleOnScroll="false"
+                app:setAutoPlay="false"
+                app:carouselOffset="start"
+                app:size="20"
+                app:indicatorRadius="0"
+                android:overScrollMode="never"
+                app:spacing="20"
+                app:resource="@layout/card_movie"
+                />
+
+
+            <TextView
+                android:id="@+id/tvComingSoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/coming_soon"
+                android:drawablePadding="10dp"
+                android:textColor="@color/dark_blue_primary"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:overScrollMode="never"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/popularMovieRecyclerView"
+                app:drawableEndCompat="@drawable/ic_coming" />
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                android:id="@+id/cardComingSoonLayout"
+                app:layout_constraintTop_toBottomOf="@id/tvComingSoon"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:sliderAnimationDuration="1000"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="1000"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="2dp"
+                    app:sliderIndicatorRadius="2dp"
+                    android:overScrollMode="never"
+                    app:sliderIndicatorSelectedColor="@color/red_primary"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="2"
+                    app:sliderStartAutoCycle="true" />
+
+            </androidx.cardview.widget.CardView>
+
+<!--           Popular Webseries            -->
+
+            <TextView
+                android:id="@+id/tvSeries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/popular_series"
+                android:textColor="@color/dark_blue_primary"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:drawablePadding="10dp"
+                android:overScrollMode="never"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardComingSoonLayout"
+                app:drawableEndCompat="@drawable/ic_film" />
+
+            <TextView
+                android:id="@+id/btnSeeAllPopSeries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="21dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/see_all"
+                android:textColor="@color/dark_blue_soft"
+                app:layout_constraintBottom_toBottomOf="@id/tvSeries"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvSeries" />
+
+            <com.jama.carouselview.CarouselView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/popSeriesSlider"
+                app:layout_constraintTop_toBottomOf="@id/tvSeries"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                app:enableSnapping="true"
+                app:scaleOnScroll="false"
+                app:setAutoPlay="false"
+                android:overScrollMode="never"
+                app:carouselOffset="start"
+                app:size="20"
+                app:indicatorRadius="0"
+                app:spacing="20"
+                app:resource="@layout/card_movie"
+                />
+
+<!--            Top Rated Movies          -->
+
+            <TextView
+                android:id="@+id/tvTopRated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/top_rated_movies"
+                android:textColor="@color/dark_blue_primary"
+                android:textSize="20sp"
+                android:drawablePadding="10dp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/popSeriesSlider"
+                app:drawableEndCompat="@drawable/ic_toprated" />
+
+            <TextView
+                android:id="@+id/btnSeeAllTopRated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="21dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/see_all"
+                android:textColor="@color/dark_blue_soft"
+                app:layout_constraintBottom_toBottomOf="@id/tvTopRated"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTopRated" />
+
+            <com.jama.carouselview.CarouselView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/topRatedMovieSlider"
+                app:layout_constraintTop_toBottomOf="@id/tvTopRated"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                app:enableSnapping="true"
+                app:scaleOnScroll="false"
+                app:setAutoPlay="false"
+                android:overScrollMode="never"
+                app:size="20"
+                app:carouselOffset="start"
+                app:indicatorRadius="0"
+                app:spacing="20"
+                app:resource="@layout/card_movie"
+                android:layout_marginBottom="15dp"
+                />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

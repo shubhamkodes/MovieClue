@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MovieClue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="see_all"><![CDATA[See All >]]></string>
+    <string name="most_popular">Most Popular</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+    <string name="popular_series">Popular Series</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="discover">Discover</string>
+    <string name="searchicon">SearchIcon</string>
+    <string name="no_internet">No Network!! Please Turn on Internet</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="5dp"
+    android:id="@+id/cardView"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="220dp">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shimmer"
+        >
+        <ImageView
+            android:id="@+id/movieImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_loading"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:id="@+id/tvImdbRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="8.6"
+            android:padding="2dp"
+            android:textColor="#fff000"
+            android:textStyle="bold"
+            android:drawablePadding="4dp"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_overlay_imdb"
+            android:layout_gravity="end"
+            app:drawableEndCompat="@drawable/ic_imdb_24" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

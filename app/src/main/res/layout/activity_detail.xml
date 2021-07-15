@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="0dp"
+    android:id="@+id/detailCardView"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:id="@+id/detailScrollView"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/constraintLayout"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/bg_overlay_detial"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="30dp"
+                android:id="@+id/notNetworkLayout"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/movieImg"
+                app:layout_constraintBottom_toTopOf="@id/movieImg"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/no_internet"
+                    android:textSize="16sp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/red_primary"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="520dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/movieImg"
+                android:src="@drawable/img_loading_large"
+                android:scaleType="fitXY"
+                android:theme="@style/roundedImageView"
+                />
+
+
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                app:layout_constraintBottom_toBottomOf="@id/movieImg"
+                app:layout_constraintEnd_toEndOf="@id/movieImg"
+                app:layout_constraintStart_toStartOf="@id/movieImg"
+                app:layout_constraintTop_toBottomOf="@+id/movieImg"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:theme="@style/Widget.AppCompat.RatingBar.MyRating"
+                />
+
+            <TextView
+                android:id="@+id/tvMovieTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/movie_title"
+                android:textColor="@color/dark_blue_primary"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@id/tvImdbRating"
+                app:layout_constraintStart_toStartOf="@id/movieImg"
+                app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+            <TextView
+                android:id="@+id/tvImdbRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/tvMovieTitle"
+                app:layout_constraintEnd_toEndOf="@id/movieImg"
+                android:textSize="14sp"
+                android:text="8.6"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/dark_blue_soft"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                app:drawableEndCompat="@drawable/ic_imdb_black" />
+            <TextView
+                android:id="@+id/tvGenres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action Comedy Adventure"
+                app:layout_constraintStart_toStartOf="@id/tvMovieTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvMovieTitle"
+                android:textColor="@color/red_primary"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans"
+                />
+
+            <TextView
+                android:id="@+id/tvRelease"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvGenres"
+                app:layout_constraintTop_toBottomOf="@id/tvGenres"
+                android:text="Release : 2021-12-14"
+                android:textSize="14sp"
+                android:textColor="@color/dark_blue_soft"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/open_sans"
+                />
+
+            <TextView
+                android:id="@+id/tvRuntime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvImdbRating"
+                app:layout_constraintEnd_toEndOf="@id/movieImg"
+                android:textSize="14sp"
+                android:text="1hr 23m"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/dark_blue_soft"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:drawablePadding="3dp"
+                app:drawableEndCompat="@drawable/ic_baseline_access_time_24" />
+
+
+            <TextView
+                android:id="@+id/tvMovieDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="We use cookies to make interactions with our website and services easy and meaningful, and better understand how they are used and to tailor advertising. You can read more and make your cookie choices here. By continuing to use this site you are giving us your consent to do this."
+                app:layout_constraintStart_toStartOf="@id/movieImg"
+                app:layout_constraintEnd_toEndOf="@id/movieImg"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvGenres"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/dark_blue_soft"
+                android:fontFamily="@font/open_sans"
+                android:layout_marginBottom="20dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvMovieDesc"
+                app:layout_constraintTop_toBottomOf="@id/tvMovieDesc"
+                android:id="@+id/tvTrailerVideos"
+                android:text="Trailer &amp; Videos"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/dark_blue_primary"
+                android:textSize="18sp"
+                android:layout_marginTop="13dp"
+                />
+
+            <com.jama.carouselview.CarouselView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/videoSlider"
+                app:layout_constraintTop_toBottomOf="@id/tvTrailerVideos"
+                android:layout_marginTop="10dp"
+                app:enableSnapping="true"
+                app:scaleOnScroll="true"
+                app:setAutoPlay="false"
+                app:carouselOffset="center"
+                app:size="1"
+                app:indicatorRadius="5"
+                app:indicatorSelectedColor="@color/red_primary"
+                app:indicatorUnselectedColor="@android:color/darker_gray"
+                android:overScrollMode="never"
+                app:spacing="1"
+                app:resource="@layout/video_card"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvMovieDesc"
+                app:layout_constraintTop_toBottomOf="@id/videoSlider"
+                android:id="@+id/tvSimilar"
+                android:text="Similar to watch..."
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/dark_blue_primary"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.jama.carouselview.CarouselView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/similarMovieSlider"
+                app:layout_constraintTop_toBottomOf="@id/tvSimilar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="5dp"
+                app:enableSnapping="true"
+                app:scaleOnScroll="false"
+                app:setAutoPlay="false"
+                app:carouselOffset="start"
+                app:size="1"
+                android:layout_marginStart="15dp"
+                app:indicatorRadius="0"
+                android:overScrollMode="never"
+                app:spacing="1"
+                app:resource="@layout/card_movie"
+                android:paddingBottom="10dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.cardview.widget.CardView>

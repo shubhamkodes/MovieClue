@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MovieClue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/dark_blue_primary</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_primary</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="editTextColor">@color/dark_blue_primary</item>
+        <item name="android:textColorHint">@color/dark_blue_primary</item>
+        <!-- Customize your theme here. -->
+
+
+    </style>
+    <style name="Widget.AppCompat.RatingBar.MyRating">
+        <item name="colorAccent">#FFC107</item>
+    </style>
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="backgroundColor">@android:color/transparent</item>
+    </style>
+    <style name="ThemeOverlay.SearchView" parent="">
+        <!-- Text color -->
+        <item name="android:editTextColor">@color/dark_blue_primary</item>
+        <!-- Hint text color -->
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+    </style>
+</resources>

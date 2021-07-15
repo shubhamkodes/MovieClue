@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alfa_slab_one</item>
+        <item>@font/amethysta</item>
+        <item>@font/butcherman</item>
+        <item>@font/open_sans</item>
+        <item>@font/roboto_light</item>
+        <item>@font/roboto_medium</item>
+    </array>
+</resources>

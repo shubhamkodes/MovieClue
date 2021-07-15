@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:id="@+id/cardView"
+    app:cardElevation="5dp"
+    android:layout_height="230dp">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/shimmer"
+                >
+                <ImageView
+                    android:id="@+id/movieImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_image_movie"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="10dp"
+                    android:elevation="20dp"
+                    android:id="@+id/ivTrending"
+                    android:src="@drawable/ic_trending"
+                        />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_overlay"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                        />
+                <TextView
+                    android:id="@+id/tvImdbRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="8.6"
+                    android:padding="2dp"
+                    android:textColor="#fff000"
+                    android:textStyle="bold"
+                    android:drawablePadding="4dp"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_overlay_imdb"
+                    android:layout_gravity="end"
+                    app:drawableEndCompat="@drawable/ic_imdb" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,16 @@
+<vector android:height="36dp" android:viewportHeight="300"
+    android:viewportWidth="300" android:width="36dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#FF000000" android:pathData="M149.996,0C67.157,0 0.001,67.161 0.001,149.997S67.157,300 149.996,300s150.003,-67.163 150.003,-150.003S232.835,0 149.996,0zM226.946,224.021L226.946,224.021c-0.001,8.593 -6.97,15.562 -15.563,15.562H88.622c-8.593,0 -15.562,-6.969 -15.562,-15.562V75.323c0,-8.593 6.969,-15.562 15.562,-15.562h122.762c8.593,0 15.562,6.969 15.562,15.562V224.021z"/>
+    <path android:fillColor="#FF000000" android:pathData="M183.261,161.5h-66.52c-3.919,0 -7.091,3.177 -7.091,7.091v41.272c0,3.919 3.175,7.091 7.091,7.091h66.52c3.919,0 7.091,-3.175 7.091,-7.091v-41.272C190.355,164.674 187.18,161.5 183.261,161.5z"/>
+    <path android:fillColor="#FF000000" android:pathData="M84.775,112.932h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M84.775,83.646h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M84.775,200.793h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M84.775,171.506h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M84.775,142.219h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M183.261,82.396h-66.52c-3.919,0 -7.091,3.177 -7.091,7.091v41.272c0,3.919 3.175,7.091 7.091,7.091h66.52c3.919,0 7.091,-3.175 7.091,-7.091V89.486C190.355,85.57 187.18,82.396 183.261,82.396z"/>
+    <path android:fillColor="#FF000000" android:pathData="M201.92,83.646h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M201.92,200.793h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M201.92,112.932h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M201.92,171.506h13.401v15.562h-13.401z"/>
+    <path android:fillColor="#FF000000" android:pathData="M201.92,142.219h13.401v15.562h-13.401z"/>
+</vector>
