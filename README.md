@@ -32,7 +32,7 @@ Here's the specifics of what you will see in the code:
 
 
 Demo Video : 
-  * https://user-images.githubusercontent.com/50069977/125779611-81917e36-fae2-4dc3-8e5a-fca697cf614e.mp4 
+  * https://bit.ly/3xQs6Ta
 
 
  
